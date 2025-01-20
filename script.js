@@ -18,7 +18,7 @@ const fields = {
     "Diğer Mühendislikler": 90,
     "Diğer Mühendis Dışı Bölümler": 90
 }
-
+-
 function getDeathDate(name, birth, field) {
     const difference = fields[field] * 365 * 24 * 60 * 60 * 1000 + getSeed(name, birth, field) * 5 * 365 * 24 * 60 * 60 * 1000;
     return new Date(birth * 1 + difference);
@@ -26,7 +26,7 @@ function getDeathDate(name, birth, field) {
 
 calculateButton.addEventListener("click", () => {
     const name = document.getElementById("name").value;
-    const birth = new Date(document.getElementById("date").value);
+    const birth = document.getElementById("date").value;
     const field = document.getElementById("field").value;
 
     if (!name || !birth || field === "Bölüm seçiniz...") {
@@ -34,7 +34,7 @@ calculateButton.addEventListener("click", () => {
         return;
     }
 
-    const deathDate = getDeathDate(name, birth, field);
+    const deathDate = getDeathDate(name, new Date(birth), field);
 
     function updateCountdown() {
         const now = new Date();
