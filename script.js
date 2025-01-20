@@ -11,13 +11,13 @@ const fields = {
     "Çevre Mühendisliği": 100,
     "Kaldırım Mühendisliği": 90,
     "Bilgisayar Mühendisliği": 80,
-    "Makine Mühendisliği": 25,
+    "Makine Mühendisliği": 23,
     "Diğer Mühendislikler": 90,
     "Diğer Mühendis Dışı Bölümler": 90
 }
 
 function getDeathDate(name, birth, field) {
-    const difference = fields[field] * 365 * 24 * 60 * 60 * 1000 + getSeed(name, birth, field) * 365 * 24 * 60 * 60 * 1000;
+    const difference = fields[field] * 365 * 24 * 60 * 60 * 1000 + getSeed(name, birth, field) * 5 * 365 * 24 * 60 * 60 * 1000;
     return new Date(birth * 1 + difference);
 }
 
