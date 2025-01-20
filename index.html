@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Ölüm Tarihi Hesaplayıcı</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ölüm Tarihi Hesaplayıcı</h1>
+
+        <label for="name">Adınız:</label>
+        <input type="text" placeholder="Adınız..." id="name" name="name"><br><br>
+
+        <label for="date">Doğum tarihin:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="field">Okuduğun üniversite bölümü:</label>
+        <select id="field">
+            <option disabled selected>Bölüm seçiniz...</option>
+            <option>Çevre Mühendisliği</option>
+            <option>Kaldırım Mühendisliği</option>
+            <option>Bilgisayar Mühendisliği</option>
+            <option>Makine Mühendisliği</option>
+            <option>Diğer Mühendislikler</option>
+            <option>Diğer Mühendis Dışı Bölümler</option>
+        </select><br><br>
+
+        <div class="calculate">Hesapla</div>
+
+        <div id="result"></div>
+    </div>
+
+    <div id="countdown-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2>Ölüm Tarihine Kalan Süre</h2>
+            <div id="countdown-timer"></div>
+        </div>
+    </div>
+
+    <div id="a">
+        <img src="https://media.tenor.com/dimT0JAAMb4AAAAe/cat-cute.png">
+        <div>naber furkan</div>
+    </div>
+
+    <div class="footer">
+        Disclaimer: This tool is for entertainment only. Results are arbitrary and not to be taken seriously. Predicting
+        death dates is impossible.<br>
+        Uyarı: Bu araç eğlence amaçlıdır. Sonuçlar gerçek dışı veriler ile oluşturulmuştur. Ölüm tarihini tahmin
+        etmek
+        mümkün değildir.
+    </div>
+</body>
+
+</html>
