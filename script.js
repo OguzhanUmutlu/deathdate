@@ -4,7 +4,10 @@ const closePopup = document.querySelector(".close-popup");
 const countdownTimer = document.getElementById("countdown-timer");
 
 function getSeed(name, birth, field) {
-    return Math.min(name.length, 10) / 10 * Math.min(birth.getFullYear(), 2023) / 2023 * Math.min(field.length, 10) / 10;
+    return name.toLowerCase().split("").map(i => {
+        i = i.charCodeAt(0);
+        return i > 96 && i < 123 ? (i - 96) / 26 : 1;
+    }).reduce((a, b) => a * b, 1) * Math.min(birth.getFullYear(), 2023) / 2023 * Math.min(field.length, 10) / 10;
 }
 
 const fields = {
